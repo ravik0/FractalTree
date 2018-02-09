@@ -1,10 +1,9 @@
-private double fractionLength = 0.8; 
-private int smallestBranch = 10; 
-private double branchAngle = .2;  
+private double fractionLength = 0.85; 
+private int smallestBranch = 10;
+private double branchAngle = 12;  
 public void setup() 
 {   
 	size(640,480);    
-	noLoop(); 
 } 
 public void draw() 
 {   
@@ -12,6 +11,7 @@ public void draw()
 	stroke(0,255,0);   
 	line(320,480,320,380);   
 	drawBranches(320,380,70,-PI/2);  //will add later 
+  branchAngle+=0.005*(Math.random()-0.5);
 } 
 public void drawBranches(int x,int y, double branchLength, double angle) {   
   double angle1 = angle + branchAngle;
